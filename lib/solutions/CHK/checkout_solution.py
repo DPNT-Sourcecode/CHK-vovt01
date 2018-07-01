@@ -22,8 +22,9 @@ def get_skus():
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
+    skus = get_skus()
     total_price = 0
-    for (sku, options) in get_skus().iteritems():
+    for (sku, options) in skus.iteritems():
         amount = skus.count(sku)
         for offer in options['offers']:
             while offer['amount'] <= amount:

@@ -11,7 +11,13 @@ class TestCheckout(unittest.TestCase):
         self.assertEqual(checkout_solution.checkout('AAAD'), 145)
 
     def test_multiple_offer(self):
-        self.assertEqual(checkout_solution.checkout('AAABB'), 145)
+        self.assertEqual(checkout_solution.checkout('AAABB'), 175)
+
+    def test_multiple_offer_with_extra(self):
+        self.assertEqual(checkout_solution.checkout('AAAABBB'), 255)
+
+    def test_bad_input(self):
+        self.assertEqual(checkout_solution.checkout('AAABBZZ'), 175)
 
 
 if __name__ == '__main__':
