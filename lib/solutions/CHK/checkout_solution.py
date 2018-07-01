@@ -24,7 +24,6 @@ def get_skus():
 def checkout(basket):
     skus = get_skus()
 
-    print(list(set(basket) - set(skus.keys())))
     if list(set(basket) - set(skus.keys())):
         return -1
 

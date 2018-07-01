@@ -17,7 +17,7 @@ class TestCheckout(unittest.TestCase):
         self.assertEqual(checkout_solution.checkout('AAAABBB'), 255)
 
     def test_bad_input(self):
-        self.assertEqual(checkout_solution.checkout('AAABBZZ'), 175)
+        self.assertEqual(checkout_solution.checkout('AAABBZZ'), -1)
 
 
 if __name__ == '__main__':
