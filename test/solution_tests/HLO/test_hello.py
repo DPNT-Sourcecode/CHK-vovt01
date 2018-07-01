@@ -5,7 +5,7 @@ from solutions.HLO import hello_solution
 
 class TestSum(unittest.TestCase):
     def test_sum(self):
-        self.assertEqual(hello.compute(1, 2), 3)
+        self.assertEqual(hello_solution.hello('Hello World'), 'Hello World')
 
 
 if __name__ == '__main__':
