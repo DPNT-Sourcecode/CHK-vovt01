@@ -1,6 +1,8 @@
 
+def get 
 
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
-    raise NotImplementedError()
+    for sku in skus:
+        print sku
