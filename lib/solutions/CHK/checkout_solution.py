@@ -24,13 +24,13 @@ def get_skus():
 def checkout(basket):
     skus = get_skus()
 
-    print(set(basket))
-    if set(basket) - set(skus.keys()) > 0:
+    print(list(set(basket) - set(skus.keys())))
+    if list(set(basket) - set(skus.keys())):
         return -1
 
     total_price = 0
     for (sku, options) in skus.iteritems():
-        amount = skus.count(basket)
+        amount = basket.count(sku)
         for offer in options['offers']:
             while offer['amount'] <= amount:
                 total_price += offer['price']
